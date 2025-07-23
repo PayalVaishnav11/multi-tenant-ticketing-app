@@ -23,6 +23,10 @@ This is a **Full Stack Ticket Management System** built for the Flowbit Internsh
 - n8n (for email automation)
 - .env for secret config
  ---
+ ## 🎥 Demo Video
+
+📽️ **[Click here to watch the demo video](assets/demo.mp4)**
+
  ## Screenshots 
  
  #### Login Page
