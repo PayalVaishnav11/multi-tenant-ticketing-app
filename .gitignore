@@ -1,0 +1,34 @@
+
+# Node
+node_modules/
+dist/
+
+# Logs
+logs/
+*.log
+
+# Environment
+.env
+.env.*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+*.swp
+
+# Build
+frontend/dist/
+api/node_modules/
+frontend/node_modules/
+
+# Docker
+**/.dockerignore
+
+# Seed logs (but NOT seed.js)
+seed-log.txt
+
+# Optional (if no use)
+*.pid

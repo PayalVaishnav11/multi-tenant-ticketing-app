@@ -1,0 +1,20 @@
+[
+  {
+    "url": "/dashboard",
+    "name": "Dashboard",
+    "role": "User",
+    "customerId": "LogisticsCo"
+  },
+  {
+    "url": "/dashboard",
+    "name": "Dashboard",
+    "role": "User",
+    "customerId": "RetailGmbH"
+  },
+  {
+    "url": "/admin",
+    "name": "Admin Panel",
+    "role": "Admin",
+    "customerId": "admin"  
+  }
+]

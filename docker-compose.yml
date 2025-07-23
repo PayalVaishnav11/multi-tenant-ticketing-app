@@ -1,0 +1,40 @@
+services:
+  backend:
+    build: ./api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./api:/app
+    depends_on:
+      - mongo
+    env_file:
+      - ./api/.env
+      
+  # frontend:
+  #   build: ./frontend
+  #   ports:
+  #     - "3000:80"
+  #   depends_on:
+  #     - backend
+
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  n8n:
+    image: n8nio/n8n
+    ports:
+      - "5678:5678"
+    env_file:
+      - ./api/.env
+    environment:
+      - N8N_RUNNERS_ENABLED=true    
+    volumes:
+      - n8n_data:/home/node/.n8n
+
+volumes:
+  mongo_data:
+  n8n_data:

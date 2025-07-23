@@ -1,0 +1,6 @@
+@import "tailwindcss";
+/* index.css or global.css */
+.dialog-overlay {
+  backdrop-filter: blur(5px); /* for full-screen backdrop */
+  background-color: rgba(0, 0, 0, 0.3); /* optional darker tint */
+}
