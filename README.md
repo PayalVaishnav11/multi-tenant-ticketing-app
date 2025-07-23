@@ -22,54 +22,59 @@ This is a **Full Stack Ticket Management System** built for the Flowbit Internsh
 - Docker Compose (backend, MongoDB, n8n)
 - n8n (for email automation)
 - .env for secret config
+ ---
+ ## Screenshots 
+ 
+ #### Login Page
+![Login Page](./assets/Login.png)
 
----
+ #### User Dashboard 
+![ User Dashboard ](./assets/UserDashboard.png)
 
-## 🏗️ Folder Structure
+#### Create Ticket 
+![ Create Ticket ](./assets/CreateTicket.png)
 
-TicketApp/
-├── api/                  # Backend (Node + Express)
-│   ├── src/
-│   ├── .env              # Env vars for backend
-│   ├── Dockerfile
-│   └── registry.json     # Role and tenant mappings
-├── frontend/             # Frontend (React + Vite)
-│   ├── src/
-│   ├── Dockerfile
-│ 
-├── docker-compose.yml    # Docker config for backend, mongo, n8n
-├── seed.js               # ✅ Seed script to insert tenants and users
-├── README.md             # 📘 This file
-├── .gitignore
+#### Admin Dashboard 
+![ Admin Dashboard ](./assets/AdminDashboard.png)
 
-## 🚀 Quick Start Instructions
+#### Admin Control Panel  
+![ Admin Control Panel ](./assets/AdminControlPanel.png)
 
-# 1. Clone the Repo
-git clone https://github.com/your-username/TicketApp.git
-cd TicketApp
+#### Change Status Of Ticket 
+![ Change Status Of Ticket ](./assets/ChangeStatusOfTicket.png)
 
-# 2. Start Docker containers (MongoDB, Backend, n8n)
-docker-compose up --build -d
+#### Delete Ticket 
+![ Delete Ticket ](./assets/DeleteTicket.png)
 
-# 3. Run seed script (only once)
-node seed.js
+ ---
+  ## 🚀 Quick Start Instructions
 
-# 4. Start frontend
-cd frontend
-npm install
-npm run dev
+## 1. **Clone the Repo**
+- git clone https://github.com/your-username/multi-tenant-ticketing-app.git
+- cd TicketApp
+
+## 2. **Start Docker containers (MongoDB, Backend, n8n)**
+- docker-compose up --build -d
+
+## 3. **Run seed script (only once)**
+- node seed.js
+
+## 4. **Start frontend**
+- cd frontend
+- npm install
+- npm run dev
 
 
 ### 🧪 Sample Credentials
 
 #### LogisticsCo
-- **User:** user1@logistics.com / `password123`
+- **User:** user@logistics.com / `password123`
 
 #### RetailGmbH
-- **User:** user1@retail.com / `password123`
+- **User:** user@retail.com / `password123`
 
 #### Admin
-- **Admin:** admin1@logistics.com / `password123`
+- **Admin:** admin@logistics.com / `password123`
 
 ## 🔁 Application Flow
 
@@ -93,24 +98,31 @@ The `seed.js` script inserts:
 - Two tenants: LogisticsCo and RetailGmbH
 - One Admin user
 
+```md
 To run:
+
 ```bash
 node seed.js
+```
 
-```md
-### 🛠️ .env Configuration (Used in Docker)
+## 🔧 .env Configuration (Used in Docker)
+### Backend:
 
-Backend:
-- `PORT=8000`
-- `MONGO_URI=mongodb://mongo:27017/ticketdb`
-- `JWT_SECRET=your-secret-key`
-- `WEBHOOK_SECRET=your-webhook-key`
-- `N8N_WEBHOOK_URL=http://n8n:5678/webhook/ticket-created`
+- PORT=8000
 
-n8n:
-- `N8N_BASIC_AUTH_USER=admin`
-- `N8N_BASIC_AUTH_PASSWORD=admin123`
+- MONGO_URI=mongodb://mongo:27017/ticketdb
 
+- JWT_SECRET=your-secret-key
+
+- WEBHOOK_SECRET=your-webhook-key
+
+- N8N_WEBHOOK_URL=http://n8n:5678/webhook/ticket-created
+
+### n8n:
+
+- N8N_BASIC_AUTH_USER=admin
+
+- N8N_BASIC_AUTH_PASSWORD=admin123
 
 
 
